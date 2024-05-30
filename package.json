@@ -1,0 +1,30 @@
+{
+  "name": "eslint-config-ultra-mega",
+  "version": "1.0.0",
+  "description": "the best eslint config 🔧🔥⚙️",
+  "main": "index.cjs",
+  "scripts": {
+    "test": "node test/test.cjs && node test/test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ctcpip/eslint-config-ultra-mega.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Chris de Almeida",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ctcpip/eslint-config-ultra-mega/issues"
+  },
+  "homepage": "https://github.com/ctcpip/eslint-config-ultra-mega#readme",
+  "peerDependencies": {
+    "eslint": ">= 9"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin-js": "^2.1.0"
+  },
+  "files": ["index.cjs"]
+}
