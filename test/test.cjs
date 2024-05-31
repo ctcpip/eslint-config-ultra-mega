@@ -1,4 +1,4 @@
 const ultraMegaConfig = require('../index.cjs');
-const assert = require('node:assert');
+const commonTest = require('./common.cjs');
 
-assert.strictEqual(ultraMegaConfig[1].rules.ultraMegaConfig, 0);
+commonTest(ultraMegaConfig);

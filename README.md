@@ -11,7 +11,7 @@ then in your eslint config file:
 for ESM:
 
 ```js
-import ultraMegaConfig = from 'eslint-config-ultra-mega';
+import ultraMegaConfig from 'eslint-config-ultra-mega';
 
 export default [
   ...ultraMegaConfig,

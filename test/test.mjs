@@ -1,4 +1,4 @@
 import ultraMegaConfig from '../index.cjs';
-import assert from 'node:assert';
+import commonTest from './common.cjs';
 
-assert.strictEqual(ultraMegaConfig[1].rules.ultraMegaConfig, 0);
+commonTest(ultraMegaConfig);

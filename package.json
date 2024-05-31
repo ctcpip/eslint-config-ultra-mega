@@ -1,10 +1,10 @@
 {
   "name": "eslint-config-ultra-mega",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "the best eslint config 🔧🔥⚙️",
   "main": "index.cjs",
   "scripts": {
-    "test": "node test/test.cjs && node test/test.mjs"
+    "test": "eslint . && node test/test.cjs && node test/test.mjs"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,10 @@
   "dependencies": {
     "@stylistic/eslint-plugin-js": "^2.1.0"
   },
-  "files": ["index.cjs"]
+  "devDependencies": {
+    "eslint": "^9.3.0"
+  },
+  "files": [
+    "index.cjs"
+  ]
 }

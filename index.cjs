@@ -1,5 +1,6 @@
 const js = require('@eslint/js');
 const stylisticJS = require('@stylistic/eslint-plugin-js');
+const globals = require('globals');
 
 module.exports = [
   js.configs.recommended,
@@ -8,13 +9,8 @@ module.exports = [
       ecmaVersion: 'latest',
       parserOptions: { ecmaFeatures: { impliedStrict: true } },
       globals: {
-        clearTimeout: true,
-        console: true,
-        module: true,
-        process: true,
-        require: true,
-        setTimeout: true,
-        structuredClone: true,
+        ...globals.browser,
+        ...globals.nodeBuiltin,
       },
     },
     files: ['**/*.cjs', '**/*.js', '**/*.mjs'],
@@ -24,6 +20,7 @@ module.exports = [
       'arrow-spacing': 'error',
       'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
       eqeqeq: 'error',
+      'no-empty-function': 'error',
       'no-unused-expressions': 'error',
       'no-var': 'error',
       'prefer-const': 'error',
