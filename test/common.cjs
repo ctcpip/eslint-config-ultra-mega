@@ -17,6 +17,13 @@ module.exports = function test(ultraMegaConfig) {
   catch (e) {
     noop(e);
   }
+
+  try {
+    noop(require); // from commonjs
+  }
+  catch (e) {
+    noop(e);
+  }
 };
 
 function noop() {

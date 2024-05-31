@@ -10,6 +10,7 @@ module.exports = [
       parserOptions: { ecmaFeatures: { impliedStrict: true } },
       globals: {
         ...globals.browser,
+        ...globals.commonjs,
         ...globals.nodeBuiltin,
       },
     },
