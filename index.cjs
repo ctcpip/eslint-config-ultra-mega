@@ -1,6 +1,5 @@
 const js = require('@eslint/js');
 const stylisticJS = require('@stylistic/eslint-plugin-js');
-const globals = require('globals');
 
 module.exports = [
   js.configs.recommended,
@@ -8,11 +7,6 @@ module.exports = [
     languageOptions: {
       ecmaVersion: 'latest',
       parserOptions: { ecmaFeatures: { impliedStrict: true } },
-      globals: {
-        ...globals.browser,
-        ...globals.commonjs,
-        ...globals.nodeBuiltin,
-      },
     },
     files: ['**/*.cjs', '**/*.js', '**/*.mjs'],
     plugins: { '@stylistic/js': stylisticJS },
@@ -47,6 +41,7 @@ module.exports = [
       '@stylistic/js/padded-blocks': ['error', 'never'],
       '@stylistic/js/quote-props': ['error', 'as-needed'],
       '@stylistic/js/quotes': ['error', 'single', { allowTemplateLiterals: true }],
+      '@stylistic/js/semi-spacing': 'error',
       '@stylistic/js/space-before-blocks': 'error',
       '@stylistic/js/space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
       '@stylistic/js/space-in-parens': 'error',

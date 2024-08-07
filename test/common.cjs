@@ -5,20 +5,6 @@ module.exports = function test(ultraMegaConfig) {
 
   // make sure expected globals do not trigger eslint/no-undef
   try {
-    noop(alert); // from browser
-  }
-  catch (e) {
-    noop(e);
-  }
-
-  try {
-    noop(process); // from nodeBuiltin
-  }
-  catch (e) {
-    noop(e);
-  }
-
-  try {
     noop(require); // from commonjs
   }
   catch (e) {
