@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ultra-mega",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "the best eslint config 🔧🔥⚙️",
   "main": "index.cjs",
   "scripts": {
@@ -24,10 +24,10 @@
     "eslint": ">= 9"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin-js": "^2.6.1"
+    "@stylistic/eslint-plugin-js": "^3.1.0"
   },
   "devDependencies": {
-    "eslint": "^9.8.0"
+    "eslint": "^9.31.0"
   },
   "files": [
     "index.cjs"
