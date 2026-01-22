@@ -1,5 +1,5 @@
-const ultraMegaConfig = require('./index.cjs');
+const ultraMega = require('./index.cjs');
 
 module.exports = [
-  ...ultraMegaConfig,
+  ...ultraMega.config,
 ];
