@@ -1,7 +1,7 @@
 const assert = require('node:assert');
 
 module.exports = function test(ultraMegaConfig) {
-  assert.strictEqual(ultraMegaConfig[1].rules.ultraMegaConfig, 0);
+  assert.strictEqual(ultraMegaConfig[0].rules.ultraMegaConfig, 0);
 
   // make sure expected globals do not trigger eslint/no-undef
   try {

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ultra-mega",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "the best eslint config 🔧🔥⚙️",
   "main": "index.cjs",
   "scripts": {

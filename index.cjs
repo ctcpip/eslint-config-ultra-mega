@@ -2,15 +2,15 @@ const js = require('@eslint/js');
 const stylisticJS = require('@stylistic/eslint-plugin-js');
 
 module.exports = [
-  js.configs.recommended,
   {
+    files: ['**/*.cjs', '**/*.js', '**/*.mjs'],
     languageOptions: {
       ecmaVersion: 'latest',
       parserOptions: { ecmaFeatures: { impliedStrict: true } },
     },
-    files: ['**/*.cjs', '**/*.js', '**/*.mjs'],
     plugins: { '@stylistic/js': stylisticJS },
     rules: {
+      ...js.configs.recommended.rules,
       ultraMegaConfig: 0,
       'arrow-spacing': 'error',
       'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
@@ -32,18 +32,31 @@ module.exports = [
       '@stylistic/js/keyword-spacing': 'error',
       '@stylistic/js/indent': ['error', 2, { SwitchCase: 1 }],
       '@stylistic/js/no-multi-spaces': ['error', { ignoreEOLComments: true }],
-      '@stylistic/js/no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
+      '@stylistic/js/no-multiple-empty-lines': [
+        'error',
+        { max: 1, maxBOF: 0, maxEOF: 0 },
+      ],
       '@stylistic/js/no-trailing-spaces': 'error',
       '@stylistic/js/no-whitespace-before-property': 'error',
       '@stylistic/js/object-curly-newline': ['error', { multiline: true }],
       '@stylistic/js/object-curly-spacing': ['error', 'always'],
-      '@stylistic/js/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
+      '@stylistic/js/object-property-newline': [
+        'error',
+        { allowAllPropertiesOnSameLine: true },
+      ],
       '@stylistic/js/padded-blocks': ['error', 'never'],
       '@stylistic/js/quote-props': ['error', 'as-needed'],
-      '@stylistic/js/quotes': ['error', 'single', { allowTemplateLiterals: true }],
+      '@stylistic/js/quotes': [
+        'error',
+        'single',
+        { allowTemplateLiterals: true },
+      ],
       '@stylistic/js/semi-spacing': 'error',
       '@stylistic/js/space-before-blocks': 'error',
-      '@stylistic/js/space-before-function-paren': ['error', { anonymous: 'never', named: 'never', asyncArrow: 'always' }],
+      '@stylistic/js/space-before-function-paren': [
+        'error',
+        { anonymous: 'never', named: 'never', asyncArrow: 'always' },
+      ],
       '@stylistic/js/space-in-parens': 'error',
       '@stylistic/js/space-infix-ops': 'error',
       '@stylistic/js/template-curly-spacing': 'error',
